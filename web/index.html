@@ -22,6 +22,7 @@
           <input id="termSearch" type="search" placeholder="Найди термин, файл или тему" />
         </label>
 
+        <button id="graphsNav" class="topic-button utility-button" type="button">Графики и формулы</button>
         <nav id="topicList" class="topic-list" aria-label="Список тем"></nav>
       </aside>
 
@@ -38,25 +39,29 @@
           </div>
         </header>
 
-        <section class="panel">
-          <h3>Определения</h3>
-          <div id="definitions" class="stack"></div>
-        </section>
+        <section id="graphsPage" class="graphs-page" hidden></section>
 
-        <section class="panel">
-          <h3>Тест для самопроверки</h3>
-          <div id="quiz" class="stack"></div>
-        </section>
+        <div id="topicPanels" class="topic-panels">
+          <section class="panel">
+            <h3>Определения</h3>
+            <div id="definitions" class="stack"></div>
+          </section>
 
-        <section class="panel">
-          <h3>Карточки для повторения</h3>
-          <div id="cards" class="cards"></div>
-        </section>
+          <section class="panel">
+            <h3>Тест для самопроверки</h3>
+            <div id="quiz" class="stack"></div>
+          </section>
 
-        <section class="panel">
-          <h3>Файлы темы</h3>
-          <div id="sources" class="files"></div>
-        </section>
+          <section class="panel">
+            <h3>Карточки для повторения</h3>
+            <div id="cards" class="cards"></div>
+          </section>
+
+          <section class="panel">
+            <h3>Файлы темы</h3>
+            <div id="sources" class="files"></div>
+          </section>
+        </div>
       </section>
     </main>
 

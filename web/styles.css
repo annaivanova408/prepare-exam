@@ -131,6 +131,12 @@ input[type="radio"] {
   gap: 8px;
 }
 
+.utility-button {
+  margin-bottom: 12px;
+  border-color: rgba(16, 163, 127, 0.35);
+  font-weight: 700;
+}
+
 .topic-button {
   width: 100%;
   padding: 10px 12px;
@@ -153,6 +159,16 @@ input[type="radio"] {
   display: grid;
   gap: 16px;
   min-width: 0;
+}
+
+.topic-panels {
+  display: grid;
+  gap: 16px;
+}
+
+.topic-panels[hidden],
+.graphs-page[hidden] {
+  display: none;
 }
 
 .topbar {
@@ -364,6 +380,266 @@ input[type="radio"] {
   font-size: 13px;
 }
 
+.graphs-page {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.formula-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  gap: 18px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 18px 20px;
+  min-width: 0;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--green);
+}
+
+.formula-card.wide {
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+}
+
+.formula-copy {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.formula-copy h3 {
+  font-size: 18px;
+}
+
+.formula-copy h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.formula-box,
+.calc-box {
+  display: grid;
+  gap: 6px;
+  border: 1px solid #eee7f7;
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  background: #fcfbff;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+}
+
+.formula-box span,
+.calc-box {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+.calc-box {
+  background: #fffdf2;
+  border-color: #f4d64f;
+}
+
+.gdp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.gdp-grid section {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-width: 0;
+}
+
+.mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+
+.mini-table th,
+.mini-table td {
+  border: 1px solid var(--line);
+  padding: 7px 8px;
+  text-align: left;
+  vertical-align: top;
+  background: #fff;
+}
+
+.mini-table th {
+  background: #f0efff;
+}
+
+.chart-wrap {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.chart-caption {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.econ-svg {
+  width: 100%;
+  max-width: 520px;
+  min-height: 220px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #ffffff;
+}
+
+.gdp-svg {
+  max-width: 640px;
+  min-height: 170px;
+}
+
+.axis,
+.scheme-line {
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.guide {
+  stroke: #9d92ac;
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+
+.demand {
+  stroke: var(--blue);
+  stroke-width: 3;
+}
+
+.supply,
+.tax-supply {
+  stroke: var(--green);
+  stroke-width: 3;
+}
+
+.tax-supply {
+  stroke-dasharray: 6 5;
+}
+
+.price-line,
+.tax-wedge {
+  stroke: var(--pink);
+  stroke-width: 3;
+}
+
+.equality {
+  stroke: #9d92ac;
+  stroke-width: 2;
+  stroke-dasharray: 6 5;
+}
+
+.lorenz-line {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 3;
+}
+
+.cs-area {
+  fill: rgba(91, 92, 246, 0.18);
+}
+
+.ps-area {
+  fill: rgba(16, 163, 127, 0.2);
+}
+
+.dwl-area {
+  fill: rgba(255, 79, 163, 0.25);
+  stroke: var(--pink);
+  stroke-width: 1.5;
+}
+
+.lorenz-gap {
+  fill: rgba(255, 79, 163, 0.16);
+}
+
+.point {
+  fill: var(--pink);
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.axis-label,
+.strong-label,
+.small-label,
+.demand-label,
+.supply-label,
+.area-label,
+.scheme-title,
+.scheme-text {
+  font-family: Arial, Helvetica, sans-serif;
+  fill: var(--ink);
+}
+
+.axis-label,
+.strong-label,
+.scheme-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.small-label,
+.demand-label,
+.supply-label,
+.area-label,
+.scheme-text {
+  font-size: 12px;
+}
+
+.demand-label {
+  fill: var(--blue);
+  font-weight: 700;
+}
+
+.supply-label {
+  fill: var(--green);
+  font-weight: 700;
+}
+
+.area-label {
+  font-weight: 700;
+}
+
+.scheme-box {
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+
+.scheme-box.one {
+  fill: #f0efff;
+}
+
+.scheme-box.two {
+  fill: #eaf8f4;
+}
+
+.scheme-box.three {
+  fill: #fff3b0;
+}
+
+.bar.nominal {
+  fill: rgba(91, 92, 246, 0.75);
+}
+
+.bar.inflation {
+  fill: rgba(255, 79, 163, 0.75);
+}
+
+.bar.real {
+  fill: rgba(16, 163, 127, 0.75);
+}
+
 @media (max-width: 920px) {
   .app {
     grid-template-columns: 1fr;
@@ -374,5 +650,24 @@ input[type="radio"] {
     height: auto;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .topbar,
+  .formula-card,
+  .formula-card.wide {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    display: grid;
+    align-items: start;
+  }
+
+  .gdp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .econ-svg {
+    max-width: 100%;
   }
 }
