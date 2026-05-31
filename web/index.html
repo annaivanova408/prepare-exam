@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Подготовка к экзамену</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="mark">exam</div>
+          <div>
+            <h1>Подготовка к экзамену</h1>
+
+          </div>
+        </div>
+
+        <label class="field">
+          <span>Поиск</span>
+          <input id="termSearch" type="search" placeholder="Найди термин, файл или тему" />
+        </label>
+
+        <nav id="topicList" class="topic-list" aria-label="Список тем"></nav>
+      </aside>
+
+      <section class="content">
+        <header class="topbar">
+          <div>
+            <h2 id="topicTitle">Тема</h2>
+            <p id="topicDesc" class="muted"></p>
+          </div>
+          <div class="meta">
+            <span id="defsCount" class="chip"></span>
+            <span id="quizCount" class="chip"></span>
+            <span id="cardsCount" class="chip"></span>
+          </div>
+        </header>
+
+        <section class="panel">
+          <h3>Определения</h3>
+          <div id="definitions" class="stack"></div>
+        </section>
+
+        <section class="panel">
+          <h3>Тест для самопроверки</h3>
+          <div id="quiz" class="stack"></div>
+        </section>
+
+        <section class="panel">
+          <h3>Карточки для повторения</h3>
+          <div id="cards" class="cards"></div>
+        </section>
+
+        <section class="panel">
+          <h3>Файлы темы</h3>
+          <div id="sources" class="files"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

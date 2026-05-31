@@ -1,0 +1,8 @@
+name: exam-preparation
+
+services:
+  exam-platform:
+    build: .
+    ports:
+      - "8080:80"
+    restart: unless-stopped
