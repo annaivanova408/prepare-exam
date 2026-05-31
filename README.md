@@ -42,6 +42,20 @@ docker compose up --build
 http://localhost:8080
 ```
 
+Важно для Safari: не открывайте `web/index.html` двойным кликом как файл. Safari блокирует загрузку `data/topics.json` из `file://`, поэтому страницу нужно открывать через локальный сервер, например по адресу выше.
+
+Для быстрой проверки без Docker можно запустить из корня проекта:
+
+```bash
+/Users/annaivanova/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m http.server 8090
+```
+
+И открыть:
+
+```text
+http://127.0.0.1:8090/web/index.html
+```
+
 ## Как обновлять материалы
 
 1. Добавьте или замените файлы в нужной тематической папке.
